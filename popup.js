@@ -16,7 +16,11 @@ grid.querySelectorAll('.char').forEach(cell => {
 
 function showMessage(text) {
   message.textContent = text;
+  message.style.opacity = 1;
+  setTimeout(() => {
+    message.style.opacity = 0;
+  }, 1000);
   setTimeout(() => {
     message.textContent = '';
-  }, 1000);
+  }, 1300);
 }
