@@ -1,12 +1,8 @@
-const chars = ['—','–','°','±','·','×','÷','←','↑','→','↓','⇧','⇩','↔','↕','★','☆','♥','☺','☹','✓','✗'];
-
 const grid = document.getElementById('grid');
 const message = document.getElementById('message');
 
-chars.forEach(ch => {
-  const div = document.createElement('div');
-  div.textContent = ch;
-  div.className = 'char';
+grid.querySelectorAll('.char').forEach(div => {
+  const ch = div.textContent;
   div.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(ch);
@@ -16,7 +12,6 @@ chars.forEach(ch => {
       console.error(err);
     }
   });
-  grid.appendChild(div);
 });
 
 function showMessage(text) {
