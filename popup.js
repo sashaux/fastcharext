@@ -1,9 +1,9 @@
 const grid = document.getElementById('grid');
 const message = document.getElementById('message');
 
-grid.querySelectorAll('.char').forEach(div => {
-  const ch = div.textContent;
-  div.addEventListener('click', async () => {
+grid.querySelectorAll('.char').forEach(cell => {
+  const ch = cell.textContent;
+  cell.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(ch);
       showMessage(`Copied ${ch}`);

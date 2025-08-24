@@ -9,15 +9,18 @@
       font-family: sans-serif;
     }
     #grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
-      gap: 4px;
-      padding: 4px;
+      border-collapse: separate;
+      border-spacing: 4px;
+      margin: 4px;
+    }
+    #grid td {
+      width: 30px;
+      height: 30px;
+      text-align: center;
     }
     .char {
       padding: 4px;
       font-size: 20px;
-      text-align: center;
       cursor: pointer;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -35,30 +38,57 @@
   </style>
 </head>
 <body>
-  <div id="grid">
-    <div class="char">«</div>
-    <div class="char">»</div>
-    <div class="char">→</div>
-    <div class="char">←</div>
-    <div class="char">↑</div>
-    <div class="char">↓</div>
-    <div class="char">~</div>
-    <div class="char">≈</div>
-    <div class="char">≠</div>
-    <div class="char">≥</div>
-    <div class="char">≤</div>
-    <div class="char">₽</div>
-    <div class="char">$</div>
-    <div class="char">€</div>
-    <div class="char">×</div>
-    <div class="char">−</div>
-    <div class="char">±</div>
-    <div class="char">–</div>
-    <div class="char">—</div>
-    <div class="char">•</div>
-    <div class="char">©</div>
-    <div class="char">ツ</div>
-  </div>
+  <table id="grid">
+    <tr>
+      <td class="char">«</td>
+      <td class="char">»</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="char">→</td>
+      <td class="char">←</td>
+      <td class="char">↑</td>
+      <td class="char">↓</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="char">~</td>
+      <td class="char">≈</td>
+      <td class="char">≠</td>
+      <td class="char">≥</td>
+      <td class="char">≤</td>
+    </tr>
+    <tr>
+      <td class="char">₽</td>
+      <td class="char">$</td>
+      <td class="char">€</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="char">×</td>
+      <td class="char">−</td>
+      <td class="char">±</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="char">–</td>
+      <td class="char">—</td>
+      <td class="char">•</td>
+      <td class="char">©</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="char">ツ</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
   <div id="message"></div>
   <script src="popup.js"></script>
 </body>
