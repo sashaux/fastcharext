@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FastChar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+      gap: 4px;
+      padding: 4px;
+    }
+    .char {
+      padding: 4px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+    }
+    .char:hover {
+      background: #f0f0f0;
+    }
+    #message {
+      text-align: center;
+      font-size: 12px;
+      padding-top: 4px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="grid"></div>
+  <div id="message"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
